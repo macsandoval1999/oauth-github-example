@@ -1,3 +1,4 @@
+// We need dotenv to load the environment variables from the .env file, which contains the GitHub client ID and secret. We also need axios to make HTTP requests to GitHub's OAuth API, express to create the web server, and path to serve static files.
 require('dotenv').config();
 const axios = require('axios');
 const express = require('express');
@@ -11,6 +12,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, '/static/index.html'));
 });
 
+// When the user clicks the "Login with GitHub" button, they will be redirected to this route (if the button has a get request to /auth. remember, even a simple <a> tag with an href to /auth will work since it is also technically a GET request). This route will redirect the user to GitHub's OAuth page, where they can authorize the app to access their GitHub account. The client_id is passed as a query parameter to identify the app to GitHub.
 app.get('/auth', (req, res) => {
   res.redirect(
     `https://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIENT_ID}`,

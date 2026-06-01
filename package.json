@@ -12,12 +12,22 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.20.0",
-    "dotenv": "^8.2.0",
+    "dotenv": "^17.4.2",
     "express": "^4.17.1",
     "passport": "^0.4.1",
     "passport-github": "^1.1.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/macsandoval1999/oauth-github-example.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/macsandoval1999/oauth-github-example/issues"
+  },
+  "homepage": "https://github.com/macsandoval1999/oauth-github-example#readme"
 }
